@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="isUserLoggedIn" style="text-align:center">
+    <img src="{{userInfo.imageUrl}}">
+    <h3>{{userInfo.displayName}}</h3>
+    <p>{{userInfo.email}}</p>
+    <button ion-button clear (click)="logout()">Logout</button>
+  </div>
+</ion-content>
+<ion-footer *ngIf="!isUserLoggedIn">
+  <button ion-button block (click)="loginWithGP()">Login with Google+</button>
+</ion-footer>

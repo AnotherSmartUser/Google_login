@@ -1,0 +1,7 @@
+{
+  "name": "goo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
